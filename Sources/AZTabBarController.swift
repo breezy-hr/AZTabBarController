@@ -276,11 +276,12 @@ public class AZTabBarController: UIViewController {
     /// The view that goes inside the buttons container and indicates which menu is selected.
     internal (set) public var selectionIndicator:UIView!
     
-    internal var selectionIndicatorLeadingConstraint:NSLayoutConstraint!
+    internal var selectionIndicatorCenterXConstraint:NSLayoutConstraint!
     
     internal var buttonsContainerHeightConstraintInitialConstant:CGFloat!
     
     internal var selectionIndicatorHeightConstraint:NSLayoutConstraint!
+	internal var selectionIndicatorWidthConstraint:NSLayoutConstraint!
     
     /*
      * MARK: - Private Properties
@@ -434,7 +435,7 @@ public class AZTabBarController: UIViewController {
     
     override public func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
 		let selectedButtonCenter = self.buttons[self.selectedIndex].center.x
-		self.selectionIndicatorLeadingConstraint.constant = selectedButtonCenter
+		self.selectionIndicatorCenterXConstraint.constant = selectedButtonCenter
 		
 //        let selectedButtonX: CGFloat = self.buttons[self.selectedIndex].frame.origin.x
 //        self.selectionIndicatorLeadingConstraint.constant = selectedButtonX
@@ -1029,7 +1030,8 @@ public class AZTabBarController: UIViewController {
             self.setupSelectionIndicatorConstraints()
         }
         self.selectionIndicatorHeightConstraint.constant = self.selectionIndicatorHeight
-		self.selectionIndicator.layer.cornerRadius = 4.0
+		self.selectionIndicatorWidthConstraint.constant = self.selectionIndicatorHeight
+		self.selectionIndicator.layer.cornerRadius = (self.selectionIndicatorHeight / 2.0)
         self.selectionIndicator.backgroundColor = self.selectionIndicatorColor ?? UIColor.black
     }
     
@@ -1041,7 +1043,7 @@ public class AZTabBarController: UIViewController {
     
     private func moveSelectionIndicator(toIndex index: Int,animated:Bool){
         
-        if selectionIndicatorLeadingConstraint == nil{
+        if selectionIndicatorCenterXConstraint == nil{
             return
         }
         
@@ -1051,7 +1053,7 @@ public class AZTabBarController: UIViewController {
         self.buttonsContainer.layoutIfNeeded()
         
         let animations = {() -> Void in
-            self.selectionIndicatorLeadingConstraint.constant = constant
+            self.selectionIndicatorCenterXConstraint.constant = constant
             self.buttonsContainer.layoutIfNeeded()
         }
         
@@ -1117,11 +1119,12 @@ fileprivate extension AZTabBarController {
     }
     
     func setupSelectionIndicatorConstraints(){
-        selectionIndicatorLeadingConstraint = selectionIndicator.centerXAnchor.constraint(equalTo: buttons[0].centerXAnchor)
-        selectionIndicatorHeightConstraint = selectionIndicator.heightAnchor.constraint(equalToConstant: 8)
-        selectionIndicatorLeadingConstraint.isActive = true
-		selectionIndicator.widthAnchor.constraint(equalToConstant: 8).isActive = true
+        selectionIndicatorCenterXConstraint = selectionIndicator.centerXAnchor.constraint(equalTo: buttons[0].centerXAnchor)
+        selectionIndicatorHeightConstraint = selectionIndicator.heightAnchor.constraint(equalToConstant: 5)
+		selectionIndicatorWidthConstraint = selectionIndicator.widthAnchor.constraint(equalToConstant: 5)
+        selectionIndicatorCenterXConstraint.isActive = true
         selectionIndicatorHeightConstraint.isActive = true
+		selectionIndicatorWidthConstraint.isActive = true
 		selectionIndicator.topAnchor.constraint(equalTo: buttonsStackView.topAnchor, constant: 4).isActive = true
     }
     
