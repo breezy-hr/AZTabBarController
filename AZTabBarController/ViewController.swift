@@ -73,9 +73,9 @@ class ViewController: UIViewController {
         
         let color = UIColor(red: 14.0/255, green: 122.0/255, blue: 254.0/255, alpha: 1.0)
         
-        tabController.selectedColor = color
+        tabController.selectedColor = nil
         
-        tabController.highlightColor = color
+        tabController.highlightColor = nil
         
         tabController.highlightedBackgroundColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.4431372549, alpha: 1)
         
@@ -85,9 +85,9 @@ class ViewController: UIViewController {
         
         tabController.buttonsBackgroundColor = UIColor(red: (247.0/255), green: (247.0/255), blue: (247.0/255), alpha: 1.0)//#colorLiteral(red: 0.2039215686, green: 0.2862745098, blue: 0.368627451, alpha: 1)
         
-        tabController.selectionIndicatorHeight = 0
-        
-        tabController.selectionIndicatorColor = color
+        tabController.selectionIndicatorHeight = 8
+		
+        tabController.selectionIndicatorColor = #colorLiteral(red: 0.4900693297, green: 0.7656323314, blue: 0.912586391, alpha: 1)
         
         tabController.tabBarHeight = 60
         
@@ -116,14 +116,14 @@ class ViewController: UIViewController {
         
         tabController.setIndex(1, animated: true)
         
-        tabController.animateTabChange = false
+        tabController.animateTabChange = true
         tabController.onlyShowTextForSelectedButtons = false
-        tabController.setTitle("Home", atIndex: 0)
-        tabController.setTitle("Search", atIndex: 1)
-        tabController.setTitle("Camera", atIndex: 2)
-        tabController.setTitle("Feed", atIndex: 3)
-        tabController.setTitle("Profile", atIndex: 4)
-        tabController.font = UIFont(name: "AvenirNext-Regular", size: 12)
+//        tabController.setTitle("Home", atIndex: 0)
+//        tabController.setTitle("Search", atIndex: 1)
+//        tabController.setTitle("Camera", atIndex: 2)
+//        tabController.setTitle("Feed", atIndex: 3)
+//        tabController.setTitle("Profile", atIndex: 4)
+//        tabController.font = UIFont(name: "AvenirNext-Regular", size: 12)
         
         let container = tabController.buttonsContainer
         container?.layer.shadowOffset = CGSize(width: 0, height: -2)
