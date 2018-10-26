@@ -435,13 +435,13 @@ public class AZTabBarController: UIViewController {
         }
     }
     
-    override public func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-		let selectedButtonCenter = self.buttons[self.selectedIndex].center.x
-		self.selectionIndicatorCenterXConstraint.constant = selectedButtonCenter
-		
-//        let selectedButtonX: CGFloat = self.buttons[self.selectedIndex].frame.origin.x
-//        self.selectionIndicatorLeadingConstraint.constant = selectedButtonX
-    }
+	public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+		coordinator.animate(alongsideTransition: { context in
+			let constant: CGFloat = ((self.buttonsContainer.frame.size.width / CGFloat(self.tabCount)) * CGFloat(self.selectedIndex))
+			self.selectionIndicatorCenterXConstraint.constant = constant
+			self.buttonsContainer.layoutIfNeeded()
+		}, completion: nil)
+	}
 
     public override func viewSafeAreaInsetsDidChange() {
         if #available(iOS 11.0, *) {
