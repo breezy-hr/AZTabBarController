@@ -1015,6 +1015,7 @@ public class AZTabBarController: UIViewController {
                 }, completion: { (bool) in
                     self.isAnimating = false
                     currentViewControllerView.removeFromSuperview()
+					currentViewControllerView.transform = .identity
                 })
                 self.moveSelectionIndicator(toIndex: index,animated: animated)
             }else{
