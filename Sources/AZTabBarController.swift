@@ -984,7 +984,7 @@ public class AZTabBarController: UIViewController {
             if self.selectedIndex >= 0 {
                 if let currentController:UIViewController = self.controllers[selectedIndex] {
                     currentViewControllerView = currentController.view
-                    if !animateTabChange {
+                    if !animateTabChange || !animated {
                         currentController.view.removeFromSuperview()
                     }
                 }
