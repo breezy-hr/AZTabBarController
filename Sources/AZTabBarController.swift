@@ -789,7 +789,7 @@ public class AZTabBarController: UIViewController {
      */
     
     @objc func tabButtonAction(button:UIButton){
-        if let index = self.buttons.index(of: button){
+        if let index = self.buttons.firstIndex(of: button){
         	delegate?.tabBar(self, didSelectTabAtIndex: index)
         
             if let id = delegate?.tabBar(self, systemSoundIdForButtonAtIndex: index), !isAnimating{
@@ -804,7 +804,7 @@ public class AZTabBarController: UIViewController {
     
     func longClick(sender:AnyObject?){
         let button = sender as! UIButton
-        if let index = self.buttons.index(of: button){
+        if let index = self.buttons.firstIndex(of: button){
         
             if let delegate = delegate{
                 if !delegate.tabBar(self, shouldLongClickForIndex: index) {
@@ -1148,7 +1148,7 @@ fileprivate extension AZTabBarController {
 
 public extension UIViewController{
     
-    public var currentTabBar: AZTabBarController?{
+    var currentTabBar: AZTabBarController?{
         var current: UIViewController? = parent
         
         repeat{

@@ -49,7 +49,7 @@
 		482DB02AEB07438C9D8ADC2DED04151D /* AZSearchViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AZSearchViewDelegate.swift; path = src/AZSearchViewDelegate.swift; sourceTree = "<group>"; };
 		4B8A751E1BB90C05FCB6CF3EA68E790D /* Pods-AZTabBarController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AZTabBarController.release.xcconfig"; sourceTree = "<group>"; };
 		558A63F72C3293E06841B21466A1DE1A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		57F83C344317AF77ECD8398E92E8FA1B /* EasyNotificationBadge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EasyNotificationBadge.framework; path = EasyNotificationBadge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57F83C344317AF77ECD8398E92E8FA1B /* EasyNotificationBadge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyNotificationBadge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5C17282474143CBA602781F05090611C /* Pods-AZTabBarController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AZTabBarController.modulemap"; sourceTree = "<group>"; };
 		61097D17F03225527BC306D38F76977E /* AZSearchViewDefaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AZSearchViewDefaults.swift; path = src/AZSearchViewDefaults.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		776530C943C9C36064804F893A9ACA5A /* Pods-AZTabBarController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AZTabBarController.debug.xcconfig"; sourceTree = "<group>"; };
 		7E37D3DCB3A7266720659CAF2AA6026C /* EasyNotificationBadge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasyNotificationBadge.modulemap; sourceTree = "<group>"; };
 		7F14BC5AB041F2F55450AA5E0DE58557 /* Pods-AZTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AZTabBarController-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		99AF36C61E2A7E09A43DC38CCCCFE556 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2369DBE57C7E0B6C107E2AD0FBB73DE /* Pods-AZTabBarController-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AZTabBarController-acknowledgements.plist"; sourceTree = "<group>"; };
 		AA60E91FE9650D92F24C2E454A6FE705 /* AZSearchView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AZSearchView.xcconfig; sourceTree = "<group>"; };
@@ -65,8 +65,8 @@
 		BD28BF12744A8EF9255AEBD683E38F53 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2AAFAFEC5100723FE3F5D4592539DF1 /* EasyNotificationBadge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EasyNotificationBadge-dummy.m"; sourceTree = "<group>"; };
 		CFA8F1A29B727CF86A2B5FE1ABE5E3C6 /* AZSearchViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AZSearchViewDataSource.swift; path = src/AZSearchViewDataSource.swift; sourceTree = "<group>"; };
-		D3689CEFD79CC8EE11BC229ED3815A02 /* Pods_AZTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AZTabBarController.framework; path = "Pods-AZTabBarController.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB5591881BF98699C1F0887608DF627B /* AZSearchView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AZSearchView.framework; path = AZSearchView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3689CEFD79CC8EE11BC229ED3815A02 /* Pods_AZTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AZTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5591881BF98699C1F0887608DF627B /* AZSearchView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AZSearchView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0852B8E6D721A8E808760598C159F1 /* AZSearchView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AZSearchView.modulemap; sourceTree = "<group>"; };
 		E146CCFA6B43C296EBAEB67DA7F93BAD /* EasyNotificationBadge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyNotificationBadge-umbrella.h"; sourceTree = "<group>"; };
 		E5E54152D8D24187FBC92F7DA70B4F94 /* Pods-AZTabBarController-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AZTabBarController-frameworks.sh"; sourceTree = "<group>"; };
@@ -125,7 +125,6 @@
 				43F97246F224949E13FDF4AC489F10FA /* EasyNotificationBadge.swift */,
 				F055A36EAB681AE717D12FCE5FEFE25B /* Support Files */,
 			);
-			name = EasyNotificationBadge;
 			path = EasyNotificationBadge;
 			sourceTree = "<group>";
 		};
@@ -208,7 +207,6 @@
 				482DB02AEB07438C9D8ADC2DED04151D /* AZSearchViewDelegate.swift */,
 				C1045328D981E6F0879A8FC194A44172 /* Support Files */,
 			);
-			name = AZSearchView;
 			path = AZSearchView;
 			sourceTree = "<group>";
 		};
@@ -317,12 +315,18 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					7D5FA4B230F9E06F5B14BAE7C73B624C = {
+						LastSwiftMigration = 1020;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -506,7 +510,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -539,7 +543,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
