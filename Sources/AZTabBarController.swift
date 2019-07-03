@@ -440,7 +440,7 @@ open class AZTabBarController: UIViewController {
         }
     }
     
-    override open func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+	public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 		super.viewWillTransition(to: size, with: coordinator)
 		
 		coordinator.animate(alongsideTransition: { context in
@@ -448,6 +448,11 @@ open class AZTabBarController: UIViewController {
 			self.selectionIndicatorCenterXConstraint.constant = constant
 			self.buttonsContainer.layoutIfNeeded()
 		}, completion: nil)
+	}
+	
+	override open func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+		let selectedButtonX: CGFloat = self.buttons[self.selectedIndex].frame.origin.x
+		self.selectionIndicatorLeadingConstraint.constant = selectedButtonX
 	}
 
     override open func viewSafeAreaInsetsDidChange() {
