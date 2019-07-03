@@ -436,6 +436,8 @@ public class AZTabBarController: UIViewController {
     }
     
 	public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+		super.viewWillTransition(to: size, with: coordinator)
+		
 		coordinator.animate(alongsideTransition: { context in
 			let constant: CGFloat = ((self.buttonsContainer.frame.size.width / CGFloat(self.tabCount)) * CGFloat(self.selectedIndex))
 			self.selectionIndicatorCenterXConstraint.constant = constant
