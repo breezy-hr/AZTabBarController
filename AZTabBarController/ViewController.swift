@@ -86,7 +86,7 @@ class ViewController: UIViewController {
 
         tabController.buttonsBackgroundColor = UIColor(red: (247.0/255), green: (247.0/255), blue: (247.0/255), alpha: 1.0)
 
-        tabController.selectionIndicatorHeight = 0
+        tabController.selectionIndicatorHeight = 7
 
         tabController.selectionIndicatorColor = color
 
