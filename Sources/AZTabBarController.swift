@@ -726,6 +726,22 @@ open class AZTabBarController: UIViewController {
         }
     }
     
+	
+	open func showTab(atIndex index: Int) {
+		guard buttons != nil,
+			selectedIndex != index,
+			index < buttons.count else { return }
+		let button = buttons[index]
+		button.isHidden = false
+	}
+	open func hideTab(atIndex index: Int) {
+		guard buttons != nil,
+			selectedIndex != index,
+			index < buttons.count else { return }
+		let button = buttons[index]
+		button.isHidden = true
+	}
+	
     
     /// Insert a tab at a certain index
     ///
