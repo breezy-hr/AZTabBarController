@@ -313,6 +313,9 @@ open class AZTabBarController: UIViewController {
     
     /// An array that holds text values before controller is displayed.
     fileprivate lazy var buttonsText: [String?] = Array<String?>(repeating: nil, count: self.tabCount)
+	
+	/// An array that holds accessibility label values before controller is displayed.
+	fileprivate lazy var buttonsAccessibility: [String?] = Array<String?>(repeating: nil, count: self.tabCount)
 
     fileprivate lazy var buttonsColors: [UIColor?] = Array<UIColor?>(repeating: nil,count: self.tabCount)
 
@@ -434,6 +437,9 @@ open class AZTabBarController: UIViewController {
             for i in 0..<buttonsText.count{
                 setTitle(buttonsText[i], atIndex: i)
             }
+			for i in 0..<buttonsAccessibility.count {
+				setAccessibilityText(buttonsAccessibility[i], at: i)
+			}
             
             //mark interface as ready
             didSetUpInterface = true
@@ -616,7 +622,28 @@ open class AZTabBarController: UIViewController {
             button.setTitleColor(titleColor ?? highlightColor, for: [])
         }
     }
-    
+	
+	
+	/// Add accessibility title to buttons
+	///
+	/// - Parameters:
+	///		- text: The accessibility text to set.
+	///		- index: The index at which you would like to set the accessibility text.
+	open func setAccessibilityText(_ text: String?, at index: Int) {
+		guard let buttons = buttons else {
+			self.buttonsAccessibility[index] = text
+			return
+		}
+		
+		// check if index is in bounds
+        guard index < buttons.count, index >= 0 else { return }
+
+        // get button
+        let button = buttons[index]
+		button.accessibilityLabel = text
+		button.isAccessibilityElement = true
+	}
+	
     
     /// Get the title at a certain index
     ///
