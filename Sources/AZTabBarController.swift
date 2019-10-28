@@ -307,6 +307,9 @@ open class AZTabBarController: UIViewController {
     
     /// Computed var that returns the amount of tabs.
     fileprivate var tabCount: Int { return tabIcons.count }
+	fileprivate var visibleTabCount: Int {
+		return buttons.filter({ !$0.isHidden }).count
+	}
     
     /// A flag that marks if the interface was setup or not.
     fileprivate var didSetUpInterface = false
@@ -450,14 +453,14 @@ open class AZTabBarController: UIViewController {
 		super.viewWillTransition(to: size, with: coordinator)
 		
 		coordinator.animate(alongsideTransition: { context in
-			let constant: CGFloat = ((self.buttonsContainer.frame.size.width / CGFloat(self.tabCount)) * CGFloat(self.selectedIndex))
+			let constant: CGFloat = ((self.buttonsContainer.frame.size.width / CGFloat(self.visibleTabCount)) * CGFloat(self.selectedIndex))
 			self.selectionIndicatorCenterXConstraint.constant = constant
 			self.buttonsContainer.layoutIfNeeded()
 		}, completion: nil)
 	}
 	
 	override open func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-		let constant: CGFloat = ((self.buttonsContainer.frame.size.width / CGFloat(self.tabCount)) * CGFloat(self.selectedIndex))
+		let constant: CGFloat = ((self.buttonsContainer.frame.size.width / CGFloat(self.visibleTabCount)) * CGFloat(self.selectedIndex))
 		self.selectionIndicatorCenterXConstraint.constant = constant
 	}
 
@@ -1128,7 +1131,7 @@ open class AZTabBarController: UIViewController {
         }
         
         //let constant:CGFloat = (self.buttons[index] as! UIButton).frame.origin.x
-        let constant: CGFloat = ((buttonsContainer.frame.size.width / CGFloat(tabCount)) * CGFloat(index))
+        let constant: CGFloat = ((buttonsContainer.frame.size.width / CGFloat(visibleTabCount)) * CGFloat(index))
         
         self.buttonsContainer.layoutIfNeeded()
         
