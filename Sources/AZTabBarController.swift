@@ -1021,6 +1021,10 @@ open class AZTabBarController: UIViewController {
         button.isExclusiveTouch = true
         button.imageView?.contentMode = .scaleAspectFit
         button.addTarget(self, action: #selector(self.tabButtonAction(button:)), for: .touchUpInside)
+		
+		if #available(iOS 13.4, *) {
+			button.pointerStyleProvider = buttonProvider
+		}
         return button
     }
     
@@ -1221,6 +1225,14 @@ fileprivate extension AZTabBarController {
     }
 }
 
+@available (iOS 13.4, *)
+fileprivate extension AZTabBarController {
+	func buttonProvider(button: UIButton, pointerEffect: UIPointerEffect, pointerShape: UIPointerShape) -> UIPointerStyle? {
+		let targetedPreview = pointerEffect.preview
+		let buttonPointerStyle = UIPointerStyle(effect: UIPointerEffect.highlight(targetedPreview), shape: pointerShape)
+		return buttonPointerStyle
+	}
+}
 
 public extension UIViewController{
 
